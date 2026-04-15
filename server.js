@@ -7,7 +7,10 @@ const app = express();
 // MIDDLEWARES
 app.use(cors());
 app.use(express.json());
-
+// ROTA INICIAL (HOME)
+app.get('/', (req, res) => {
+    res.send("🚀 API de Etiquetas Online");
+});
 // BANCO
 const db = new sqlite3.Database('./banco.db');
 
